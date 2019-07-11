@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <h1 class="display-4">Welcome to the Node's Blog!</h1>
+  <p class="lead"><p>This is a test blog developed in nodeJs with learning purpose</p>
+  <hr class="my-4">
+  <p><a href="https://github.com/victorstati/">Link for github</a></p>
+  <a class="btn btn-primary btn-lg" href="/usuarios/registro" role="button">Register your account</a>
+</div>
+<hr />
+<h2>Recent Posts:</h2>
+{{#each postagens}}
+<div class="card mt-4">
+    <div class="card-body">
+        <h3>{{titulo}}</h3>
+        <p>{{descricao}}</p>
+        <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+        <hr />
+        <small>Categoria: {{categoria.nome}}</small><br />
+        <small>Data de publicação: {{data}}</small>
+    </div>
+</div>
+{{else}}
+    <h5>No posts!</h5>
+{{/each}}
